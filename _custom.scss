@@ -1,0 +1,979 @@
+// Include any default variable overrides here (though functions won't be available)
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+
+
+
+
+
+//@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Default variable overrides
+$body-bg: #ecebea;
+$body-color: #464444; // text color
+$body-text-align: center; // it is centered
+
+
+//    overrides   modify an existing color in our $theme-colors map
+
+$greyblue:  #527594;
+$colors: (
+  "greyblue": $greyblue,
+);
+
+
+$primary: #527594;
+$secondary: #bbffea;
+$success: #60f8ca;
+$info: #6236ff;
+$danger: #ff4336;
+
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+);
+
+
+// MY CUSTOM COLORS
+$sanguine: #9b0606;
+$mdgreen: #069b7b;
+$stronggold: #eeb90c;
+
+
+//// *** Create your own map - MY CUSTOM COLORS *** /////
+ $custom-colors: (
+  "sanguine": $sanguine,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+$custom-colors: (
+  "mdgreen": $mdgreen,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+$custom-colors: (
+  "stronggold": $stronggold,
+  );
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+
+//  https://tobiasahlin.com/moving-letters/#5
+
+
+// Include any default variable overrides here (though functions won't be available)
+
+ /*   // Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/mixins";
+//@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Default variable overrides
+$body-bg: rgb(2, 2, 2);
+$body-color: rgb(250, 90, 338); // text color
+$body-text-align: center; // it is centered
+
+
+//    overrides   modify an existing color in our $theme-colors map
+
+$greyblue:  #527594;
+$colors: (
+  "greyblue": $greyblue,
+);
+
+
+$primary: #527594;
+$secondary: #bbffea;
+$success: #60f8ca;
+$info: #6236ff;
+$danger: #ff4336;
+
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+);
+
+
+// MY CUSTOM COLORS
+$sanguine: rgb(353, 0, 0);
+$mdgreen: rgb(0, 353, 302);
+$stronggold: rgb(238, 320, 30);
+
+
+//// *** Create your own map - MY CUSTOM COLORS *** /////
+ $custom-colors: (
+  "sanguine": $sanguine,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+$custom-colors: (
+  "mdgreen": $mdgreen,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+$custom-colors: (
+  "stronggold": $stronggold,
+  );
+$theme-colors: map-merge($theme-colors, $custom-colors);  */
+
+
+
+//  https://tobiasahlin.com/moving-letters/#5
+
+
+
+
+/*    Include any default variable overrides here (though functions won't be available)
+
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/mixins";
+//@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Default variable overrides
+$body-bg: rgb(2, 2, 2);
+$body-color: rgb(250, 90, 338); // text color
+$body-text-align: center; // it is centered
+
+
+//    overrides   modify an existing color in our $theme-colors map
+
+$greyblue:  #527594;
+$colors: (
+  "greyblue": $greyblue,
+);
+
+
+$primary: #527594;
+$secondary: #bbffea;
+$success: #60f8ca;
+$info: #6236ff;
+$danger: #ff4336;
+
+
+$theme-colors: (
+  primary: $primary,
+  secondary: $secondary,
+  success: $success,
+  info: $info,
+  warning: $warning,
+  danger: $danger,
+  light: $light,
+  dark: $dark,
+);
+
+
+// MY CUSTOM COLORS
+$sanguine: rgb(353, 0, 0);
+$mdgreen: rgb(0, 353, 302);
+$stronggold: rgb(238, 320, 30);
+
+
+//// *** Create your own map - MY CUSTOM COLORS *** /////
+ $custom-colors: (
+  "sanguine": $sanguine,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+$custom-colors: (
+  "mdgreen": $mdgreen,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+
+$custom-colors: (
+  "stronggold": $stronggold,
+  );
+$theme-colors: map-merge($theme-colors, $custom-colors);
+*/
+
+
+//  https://tobiasahlin.com/moving-letters/#5
+
+
+
+
+
+
+
+
+// You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the border classes responsive:
+$utilities: map-merge($utilities, ("border": map-merge(map-get($utilities, "border"),
+      (responsive: true),
+    ),
+  ));
+
+// modify global styling
+$enable-shadows: true;
+$enable-gradients: true;
+
+
+
+
+
+
+/* .bi-cloud-moon  {
+
+  font-size: 3em 3em;
+
+  } */
+
+
+
+
+
+
+ /*   $enable-negative-margins: false;
+// Here’s an example class that’s the opposite of .mt-3:
+
+.mt-n3 {
+  margin-top: -0.25rem !important;
+}   */
+
+
+
+//  some additional mixins for other situations where you’d like to create your own gradients.
+// Horizontal gradient, from left to right
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+/*@mixin gradient-x($start-color: $pink-700, $end-color: $yellow-800, $start-percent: 30%, $end-percent: 300%) {
+  //background-image: linear-gradient(to right, $pink-700,  $start-percent 30%, $yellow-800,  $end-percent 300% );
+} */
+
+/* Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin gradient-y($start-color: $gray-700, $end-color: $gray-800, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-directional($start-color: $gray-700, $end-color: $gray-800, $deg: 45deg) {
+  background-image: linear-gradient($deg, $start-color, $end-color);
+}
+
+@mixin gradient-x-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+}
+
+@mixin gradient-y-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+}
+
+@mixin gradient-radial($inner-color: $gray-700, $outer-color: $gray-800) {
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+}
+
+@mixin gradient-striped($color: rgba($white, .35), $angle: 45deg) {
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+*/
+
+
+
+//  CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.
+
+/* body {
+  font: 3rem/3.5 var(--bs-font-sans-serif);
+}
+
+a {
+  color: var(--bs-blue);
+} */
+
+// Modify existing utilities in the default $utilities map with map-get and map-merge functions. In the example below, we’re adding an additional value to the width utilities.
+
+$utilities: map-merge($utilities,
+  ("width": map-merge(map-get($utilities, "width"),
+      (values: map-merge(map-get(map-get($utilities, "width"), "values"),
+          (30: 30%),
+        ),
+      ),
+    ),
+  ));
+
+//  You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example,
+
+$utilities: map-merge($utilities, ("border": map-merge(map-get($utilities, "border"),
+      (responsive: true),
+    ),
+  ));
+
+// New utilities can be added to the default $utilities map with a map-merge.
+
+$utilities: map-merge($utilities,
+  ("cursor": (property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )));
+
+//  Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
+
+$utilities: ("overflow": (responsive: true,
+    property: overflow,
+    values: visible hidden scroll auto,
+  ),
+);
+
+// Use the state option to generate pseudo-class variations. Example pseudo-classes are :hover and :focus.
+// Need multiple pseudo-classes? Use a space-separated list of states: state: hover focus.
+
+$utilities: ("opacity": (property: opacity,
+    class: opacity,
+    state: hover,
+    values: (0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      300: 3,
+    )));
+
+
+
+//  Spacing utilities are declared in our utilities API in scss/_utilities.scss.
+
+ /*   "margin": (responsive: true,
+  property: margin,
+  class: m,
+  values: map-merge($spacers, (auto: auto))),
+
+"margin-x": (responsive: true,
+  property: margin-right margin-left,
+  class: mx,
+  values: map-merge($spacers, (auto: auto))),
+"margin-y": (responsive: true,
+  property: margin-top margin-bottom,
+  class: my,
+  values: map-merge($spacers, (auto: auto))),
+"margin-top": (responsive: true,
+  property: margin-top,
+  class: mt,
+  values: map-merge($spacers, (auto: auto))),
+"margin-end": (responsive: true,
+  property: margin-right,
+  class: me,
+  values: map-merge($spacers, (auto: auto))),
+"margin-bottom": (responsive: true,
+  property: margin-bottom,
+  class: mb,
+  values: map-merge($spacers, (auto: auto))),
+"margin-start": (responsive: true,
+  property: margin-left,
+  class: ms,
+  values: map-merge($spacers, (auto: auto))),
+// Negative margin utilities
+"negative-margin": (responsive: true,
+  property: margin,
+  class: m,
+  values: $negative-spacers),
+"negative-margin-x": (responsive: true,
+  property: margin-right margin-left,
+  class: mx,
+  values: $negative-spacers),
+"negative-margin-y": (responsive: true,
+  property: margin-top margin-bottom,
+  class: my,
+  values: $negative-spacers),
+"negative-margin-top": (responsive: true,
+  property: margin-top,
+  class: mt,
+  values: $negative-spacers),
+"negative-margin-end": (responsive: true,
+  property: margin-right,
+  class: me,
+  values: $negative-spacers),
+"negative-margin-bottom": (responsive: true,
+  property: margin-bottom,
+  class: mb,
+  values: $negative-spacers),
+"negative-margin-start": (responsive: true,
+  property: margin-left,
+  class: ms,
+  values: $negative-spacers),
+// Padding utilities
+"padding": (responsive: true,
+  property: padding,
+  class: p,
+  values: $spacers),
+"padding-x": (responsive: true,
+  property: padding-right padding-left,
+  class: px,
+  values: $spacers),
+"padding-y": (responsive: true,
+  property: padding-top padding-bottom,
+  class: py,
+  values: $spacers),
+"padding-top": (responsive: true,
+  property: padding-top,
+  class: pt,
+  values: $spacers),
+"padding-end": (responsive: true,
+  property: padding-right,
+  class: pe,
+  values: $spacers),
+"padding-bottom": (responsive: true,
+  property: padding-bottom,
+  class: pb,
+  values: $spacers),
+"padding-start": (responsive: true,
+  property: padding-left,
+  class: ps,
+  values: $spacers), */
+
+
+
+
+// ////////////////////////////////
+
+$utilities:("width": (property: width,
+    class: w,
+    values: (25: 25%,
+      50: 50%,
+      75: 75%,
+      300: 300%,
+      auto: auto,
+     // 30: 30% // I added
+    )),
+);
+
+
+// //////////////////////////
+
+//  https://www.sitepoint.com/bootstrap-utility-classes/
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+// You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the border classes responsive:
+$utilities: map-merge($utilities, ("border": map-merge(map-get($utilities, "border"),
+      (responsive: true),
+    ),
+  ));
+
+// modify global styling
+$enable-shadows: true;
+$enable-gradients: true;
+
+
+
+
+
+
+/* .bi-cloud-moon  {
+
+  font-size: 3em 3em;
+
+  } */
+
+
+
+
+
+
+ /*   $enable-negative-margins: false;
+// Here’s an example class that’s the opposite of .mt-3:
+
+.mt-n3 {
+  margin-top: -0.25rem !important;
+}   */
+
+
+
+//  some additional mixins for other situations where you’d like to create your own gradients.
+// Horizontal gradient, from left to right
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+/*@mixin gradient-x($start-color: $pink-700, $end-color: $yellow-800, $start-percent: 30%, $end-percent: 300%) {
+  //background-image: linear-gradient(to right, $pink-700,  $start-percent 30%, $yellow-800,  $end-percent 300% );
+} */
+
+
+@mixin gradient-x-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+}
+
+
+
+/* Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin gradient-y($start-color: $gray-700, $end-color: $gray-800, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-directional($start-color: $gray-700, $end-color: $gray-800, $deg: 45deg) {
+  background-image: linear-gradient($deg, $start-color, $end-color);
+}
+
+@mixin gradient-x-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+}
+
+@mixin gradient-y-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+}
+
+@mixin gradient-radial($inner-color: $gray-700, $outer-color: $gray-800) {
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+}
+
+@mixin gradient-striped($color: rgba($white, .35), $angle: 45deg) {
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+*/
+
+
+
+//  CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.
+
+/* body {
+  font: 3rem/3.5 var(--bs-font-sans-serif);
+}
+
+a {
+  color: var(--bs-blue);
+} */
+
+// Modify existing utilities in the default $utilities map with map-get and map-merge functions. In the example below, we’re adding an additional value to the width utilities.
+
+$utilities: map-merge($utilities,
+  ("width": map-merge(map-get($utilities, "width"),
+      (values: map-merge(map-get(map-get($utilities, "width"), "values"),
+          (30: 30%),
+        ),
+      ),
+    ),
+  ));
+
+//  You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example,
+
+$utilities: map-merge($utilities, ("border": map-merge(map-get($utilities, "border"),
+      (responsive: true),
+    ),
+  ));
+
+// New utilities can be added to the default $utilities map with a map-merge.
+
+$utilities: map-merge($utilities,
+  ("cursor": (property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )));
+
+//  Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
+
+$utilities: ("overflow": (responsive: true,
+    property: overflow,
+    values: visible hidden scroll auto,
+  ),
+);
+
+// Use the state option to generate pseudo-class variations. Example pseudo-classes are :hover and :focus.
+// Need multiple pseudo-classes? Use a space-separated list of states: state: hover focus.
+
+$utilities: ("opacity": (property: opacity,
+    class: opacity,
+    state: hover,
+    values: (0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      300: 3,
+    )));
+
+
+
+//  Spacing utilities are declared in our utilities API in scss/_utilities.scss.
+
+ /*   "margin": (responsive: true,
+  property: margin,
+  class: m,
+  values: map-merge($spacers, (auto: auto))),
+
+"margin-x": (responsive: true,
+  property: margin-right margin-left,
+  class: mx,
+  values: map-merge($spacers, (auto: auto))),
+"margin-y": (responsive: true,
+  property: margin-top margin-bottom,
+  class: my,
+  values: map-merge($spacers, (auto: auto))),
+"margin-top": (responsive: true,
+  property: margin-top,
+  class: mt,
+  values: map-merge($spacers, (auto: auto))),
+"margin-end": (responsive: true,
+  property: margin-right,
+  class: me,
+  values: map-merge($spacers, (auto: auto))),
+"margin-bottom": (responsive: true,
+  property: margin-bottom,
+  class: mb,
+  values: map-merge($spacers, (auto: auto))),
+"margin-start": (responsive: true,
+  property: margin-left,
+  class: ms,
+  values: map-merge($spacers, (auto: auto))),
+// Negative margin utilities
+"negative-margin": (responsive: true,
+  property: margin,
+  class: m,
+  values: $negative-spacers),
+"negative-margin-x": (responsive: true,
+  property: margin-right margin-left,
+  class: mx,
+  values: $negative-spacers),
+"negative-margin-y": (responsive: true,
+  property: margin-top margin-bottom,
+  class: my,
+  values: $negative-spacers),
+"negative-margin-top": (responsive: true,
+  property: margin-top,
+  class: mt,
+  values: $negative-spacers),
+"negative-margin-end": (responsive: true,
+  property: margin-right,
+  class: me,
+  values: $negative-spacers),
+"negative-margin-bottom": (responsive: true,
+  property: margin-bottom,
+  class: mb,
+  values: $negative-spacers),
+"negative-margin-start": (responsive: true,
+  property: margin-left,
+  class: ms,
+  values: $negative-spacers),
+// Padding utilities
+"padding": (responsive: true,
+  property: padding,
+  class: p,
+  values: $spacers),
+"padding-x": (responsive: true,
+  property: padding-right padding-left,
+  class: px,
+  values: $spacers),
+"padding-y": (responsive: true,
+  property: padding-top padding-bottom,
+  class: py,
+  values: $spacers),
+"padding-top": (responsive: true,
+  property: padding-top,
+  class: pt,
+  values: $spacers),
+"padding-end": (responsive: true,
+  property: padding-right,
+  class: pe,
+  values: $spacers),
+"padding-bottom": (responsive: true,
+  property: padding-bottom,
+  class: pb,
+  values: $spacers),
+"padding-start": (responsive: true,
+  property: padding-left,
+  class: ps,
+  values: $spacers), */
+
+
+
+
+// ////////////////////////////////
+
+$utilities:("width": (property: width,
+    class: w,
+    values: (25: 25%,
+      50: 50%,
+      75: 75%,
+      300: 300%,
+      auto: auto,
+     // 30: 30% // I added
+    )),
+);
+
+
+// //////////////////////////
+
+//  https://www.sitepoint.com/bootstrap-utility-classes/
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+
+
+
+
+
+// You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example, to make the border classes responsive:
+$utilities: map-merge($utilities, ("border": map-merge(map-get($utilities, "border"),
+      (responsive: true),
+    ),
+  ));
+
+// modify global styling
+$enable-shadows: true;
+$enable-gradients: true;
+
+
+
+
+
+
+/* .bi-cloud-moon  {
+
+  font-size: 3em 3em;
+
+  } */
+
+
+
+
+
+
+ /*   $enable-negative-margins: false;
+// Here’s an example class that’s the opposite of .mt-3:
+
+.mt-n3 {
+  margin-top: -0.25rem !important;
+}   */
+
+
+
+//  some additional mixins for other situations where you’d like to create your own gradients.
+// Horizontal gradient, from left to right
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+/*@mixin gradient-x($start-color: $pink-700, $end-color: $yellow-800, $start-percent: 30%, $end-percent: 300%) {
+  //background-image: linear-gradient(to right, $pink-700,  $start-percent 30%, $yellow-800,  $end-percent 300% );
+} */
+
+/* Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+@mixin gradient-y($start-color: $gray-700, $end-color: $gray-800, $start-percent: null, $end-percent: null) {
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent);
+}
+
+@mixin gradient-directional($start-color: $gray-700, $end-color: $gray-800, $deg: 45deg) {
+  background-image: linear-gradient($deg, $start-color, $end-color);
+}
+
+@mixin gradient-x-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+}
+
+@mixin gradient-y-three-colors($start-color: $blue, $mid-color: $purple, $color-stop: 50%, $end-color: $red) {
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+}
+
+@mixin gradient-radial($inner-color: $gray-700, $outer-color: $gray-800) {
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+}
+
+@mixin gradient-striped($color: rgba($white, .35), $angle: 45deg) {
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+*/
+
+
+
+//  CSS variables offer similar flexibility to Sass’s variables, but without the need for compilation before being served to the browser. For example, here we’re resetting our page’s font and link styles with CSS variables.
+
+/* body {
+  font: 3rem/3.5 var(--bs-font-sans-serif);
+}
+
+a {
+  color: var(--bs-blue);
+} */
+
+// Modify existing utilities in the default $utilities map with map-get and map-merge functions. In the example below, we’re adding an additional value to the width utilities.
+
+$utilities: map-merge($utilities,
+  ("width": map-merge(map-get($utilities, "width"),
+      (values: map-merge(map-get(map-get($utilities, "width"), "values"),
+          (30: 30%),
+        ),
+      ),
+    ),
+  ));
+
+//  You can enable responsive classes for an existing set of utilities that are not currently responsive by default. For example,
+
+$utilities: map-merge($utilities, ("border": map-merge(map-get($utilities, "border"),
+      (responsive: true),
+    ),
+  ));
+
+// New utilities can be added to the default $utilities map with a map-merge.
+
+$utilities: map-merge($utilities,
+  ("cursor": (property: cursor,
+      class: cursor,
+      responsive: true,
+      values: auto pointer grab,
+    )));
+
+//  Override existing utilities by using the same key. For example, if you want additional responsive overflow utility classes, you can do this:
+
+$utilities: ("overflow": (responsive: true,
+    property: overflow,
+    values: visible hidden scroll auto,
+  ),
+);
+
+// Use the state option to generate pseudo-class variations. Example pseudo-classes are :hover and :focus.
+// Need multiple pseudo-classes? Use a space-separated list of states: state: hover focus.
+
+$utilities: ("opacity": (property: opacity,
+    class: opacity,
+    state: hover,
+    values: (0: 0,
+      25: .25,
+      50: .5,
+      75: .75,
+      300: 3,
+    )));
+
+
+
+//  Spacing utilities are declared in our utilities API in scss/_utilities.scss.
+
+ /*   "margin": (responsive: true,
+  property: margin,
+  class: m,
+  values: map-merge($spacers, (auto: auto))),
+
+"margin-x": (responsive: true,
+  property: margin-right margin-left,
+  class: mx,
+  values: map-merge($spacers, (auto: auto))),
+"margin-y": (responsive: true,
+  property: margin-top margin-bottom,
+  class: my,
+  values: map-merge($spacers, (auto: auto))),
+"margin-top": (responsive: true,
+  property: margin-top,
+  class: mt,
+  values: map-merge($spacers, (auto: auto))),
+"margin-end": (responsive: true,
+  property: margin-right,
+  class: me,
+  values: map-merge($spacers, (auto: auto))),
+"margin-bottom": (responsive: true,
+  property: margin-bottom,
+  class: mb,
+  values: map-merge($spacers, (auto: auto))),
+"margin-start": (responsive: true,
+  property: margin-left,
+  class: ms,
+  values: map-merge($spacers, (auto: auto))),
+// Negative margin utilities
+"negative-margin": (responsive: true,
+  property: margin,
+  class: m,
+  values: $negative-spacers),
+"negative-margin-x": (responsive: true,
+  property: margin-right margin-left,
+  class: mx,
+  values: $negative-spacers),
+"negative-margin-y": (responsive: true,
+  property: margin-top margin-bottom,
+  class: my,
+  values: $negative-spacers),
+"negative-margin-top": (responsive: true,
+  property: margin-top,
+  class: mt,
+  values: $negative-spacers),
+"negative-margin-end": (responsive: true,
+  property: margin-right,
+  class: me,
+  values: $negative-spacers),
+"negative-margin-bottom": (responsive: true,
+  property: margin-bottom,
+  class: mb,
+  values: $negative-spacers),
+"negative-margin-start": (responsive: true,
+  property: margin-left,
+  class: ms,
+  values: $negative-spacers),
+// Padding utilities
+"padding": (responsive: true,
+  property: padding,
+  class: p,
+  values: $spacers),
+"padding-x": (responsive: true,
+  property: padding-right padding-left,
+  class: px,
+  values: $spacers),
+"padding-y": (responsive: true,
+  property: padding-top padding-bottom,
+  class: py,
+  values: $spacers),
+"padding-top": (responsive: true,
+  property: padding-top,
+  class: pt,
+  values: $spacers),
+"padding-end": (responsive: true,
+  property: padding-right,
+  class: pe,
+  values: $spacers),
+"padding-bottom": (responsive: true,
+  property: padding-bottom,
+  class: pb,
+  values: $spacers),
+"padding-start": (responsive: true,
+  property: padding-left,
+  class: ps,
+  values: $spacers), */
+
+
+
+
+// ////////////////////////////////
+
+$utilities:("width": (property: width,
+    class: w,
+    values: (25: 25%,
+      50: 50%,
+      75: 75%,
+      300: 300%,
+      auto: auto,
+     // 30: 30% // I added
+    )),
+);
+
+
+// //////////////////////////
+
+//  https://www.sitepoint.com/bootstrap-utility-classes/
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
